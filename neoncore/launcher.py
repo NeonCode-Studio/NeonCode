@@ -5,6 +5,7 @@ from apps.phone import main as phone
 from apps.devthings.terminal import main as terminal
 from apps.devthings.commander import main as commander
 from apps.devthings.devapp import main as devapp
+from apps.binary_translator import main as binary_translator
 
 apps = [
     "Calculator",
@@ -13,7 +14,8 @@ apps = [
     "Phone",
     "Terminal (DevThings)",
     "NeonCommander (DevThings)",
-    "DevApp (DevThings)"
+    "DevApp (DevThings)",
+    "Binary-to-Text Translator"
 ]
 
 def list_apps():
@@ -36,6 +38,8 @@ def launch_app(choice):
         commander.run()
     elif choice == 7:
         devapp.run()
+    elif choice == 8:
+        binary_translator.run()
     else:
         print("Niepoprawny wybór.")
 
